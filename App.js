@@ -9,9 +9,18 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Header/>
-        
-        <Contact/>
+
+        <Header branding="contact manager stuff"/>
+        <Contact
+        name="dip sarker"
+        email="naoidefo@oiodsf.com"
+        phone="aosdjoifoajoj"
+        />
+        <Contact 
+          name="bikram sarker"
+          email="bal@chal.com"
+          phone="1452236"
+        />
 
       </div>
     );
