@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+
 
 class Contact extends Component {
   render() {
@@ -7,7 +10,7 @@ class Contact extends Component {
     const {name,email,phone}=this.props;
     return (
       <div>
-        <h4>{this.props.name}</h4>
+        <h4 style={headingStyle}>{name}</h4>
       	<ul>
       		<li>email:{email}</li>
       		<li>phone:{phone}</li>
@@ -16,6 +19,18 @@ class Contact extends Component {
       </div>
     );
   }
+}
+// propTypes validation perpose
+// proptypes must be lower case (header o contact js e validation kora )
+Contact.propTypes={
+  name:PropTypes.string.isRequired,
+  phone:PropTypes.string.isRequired,
+  email:PropTypes.string.isRequired,
+}
+// stylling perpose
+const headingStyle={
+  color:'green',
+  fontSize:'40px'
 }
 export default Contact;
 
