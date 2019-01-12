@@ -9,12 +9,12 @@ class Contact extends Component {
 
     const {name,email,phone}=this.props;
     return (
-      <div>
+      <div className="card card-body mb-3">
         <h4 style={headingStyle}>{name}</h4>
-      	<ul>
-      		<li>email:{email}</li>
-      		<li>phone:{phone}</li>
-      		<li>phone:{name}</li>          
+      	<ul className="list group">
+      		<li className="list group-item">email:{email}</li>
+      		{/* <li className="list group-item">phone:{phone}</li> */}
+      		<li className="list group-item">phone:{name}</li>          
       	</ul>
       </div>
     );
